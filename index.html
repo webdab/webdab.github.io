@@ -2,46 +2,223 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" href="css/main.css">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-image: url("images/timg.jpg");
+			background-size: cover;
+			padding-top: 00px;
+			margin-left: -100px;
+			perspective: 800px;
+			overflow: hidden;
+		}
+		.box{
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+			position: relative;
+			perspective: 500px;
+			transform-style: preserve-3d;
+			transform: rotateX(45deg) rotateY(-15deg);
+		}
+		.box div{
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			position: absolute;
+			border: 1px solid #333;
+			/* animation: zhuan 2s linear infinite; */
+		}
+		.box span{
+			border-radius: 50%;
+			position: absolute;
+			left:50%;
+			transform: translate(-50%, -50%);
+			
+			background-image: radial-gradient(at 20px 30px ,rgba(255, 255, 255, .01),rgba(0, 0, 0, 0.8));
+		}
+		@keyframes zhuan{
+			0%{
+				transform:translate(-50%, -50%)  rotateZ(0deg)  ;
+			}
+			100%{
+				transform: translate(-50%, -50%) rotateZ(360deg)  ;
+			}
+		}
+
+		@keyframes zhuan1{
+			0%{
+				transform: rotateY(30deg) translate(-50%, -50%)  rotateZ(0deg)  ;
+			}
+			100%{
+				transform: rotateY(30deg) translate(-50%, -50%)  rotateZ(-360deg)  ;
+			}
+		}
+		/* 7 */
+		.star7{
+			width: 1000px;
+			height: 1000px;
+			animation: zhuan 10s linear infinite;
+			/* perspective: 600px; */
+
+			
+		}
+		.star7_1{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;	
+			position: absolute;
+			z-index: 10;
+			animation: zhuan1 5s linear infinite;
+			transform-style: preserve-3d;
+		}
+		.star7_1:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 260px;
+			height: 260px;
+			top: -66px;
+			left: -60px;
+			border: 30px solid #A7915E;
+			border-radius: 50%;
+			transform:rotateX(70deg) rotateY(25deg);
+
+		}
+		/* 6 */
+		.star6{
+			width: 850px;
+			height: 850px;
+			animation: zhuan 8s linear infinite;
+		}
+		.star6_1{
+			width: 160px;
+			height: 160px;
+			background-color: blue;	
+		}
+		/* 5 */
+		.star5{
+			width: 700px;
+			height: 700px;
+			animation: zhuan 5s linear infinite;
+		}
+		.star5_1{
+			width: 120px;
+			height: 120px;
+			background-color: red;	
+		}
+		.star4{
+			width: 550px;
+			height: 550px;
+			perspective: 800px;
+			animation: zhuan 7s linear infinite;
+		}
+		
+		.box .star4_1{
+			width: 80px;
+			height: 80px;
+			background-color: green;	
+			
+			transform-style: preserve-3d;
+			
+		}
+		.box .star4_2{
+			width: 80px;
+			height: 80px;
+			/* background-color: green; */
+			animation: zhuan1 1s linear infinite;
+			background-image: radial-gradient(at 20px 30px ,rgba(255, 255, 255, .0),rgba(0, 0, 0, 0));
+			/* transform-style: preserve-3d; */
+			
+		}
+		.star4_2:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: -40px;
+			background-color: #aaa;
+			border-radius: 50%;
+			background-image: radial-gradient(at 20px 30px ,rgba(255, 255, 255, .01),rgba(0, 0, 0, 0.8));
+		}
+		/* 3 */
+		.star3{
+			width: 400px;
+			height: 400px;
+			animation: zhuan 4s linear infinite;
+		}
+		.star3_1{
+			width: 50px;
+			height: 50px;
+			background-color: orange;	
+		}
+		/* 2 */
+		.star2{
+			width: 250px;
+			height: 250px;
+			animation: zhuan 3s linear infinite;
+		}
+		.star2_1{
+			width: 50px;
+			height:50px;
+			background-color: purple;	
+		}
+		/* 1 */
+		.star1{
+			width: 100px;
+			height: 100px;
+		}
+		.star1_1{
+			width: 30px;
+			height: 30px;
+			background-color: purple;	
+		}
+		.box .sun{
+			width: 150px;
+			height: 150px;
+			background-color: rgb(232, 93, 25);
+			border: none;
+			background-image: radial-gradient(at 40px 50px ,rgba(255, 255, 255, 0.1),rgba(255, 0, 0, 0.9));
+			box-shadow: 0 0 50px rgb(255, 93, 25);
+		}
+
+	</style>
 </head>
 <body>
-	<div class="dv">
-		<p>一人 我饮酒醉
-		<p>醉把佳人成双对
-		<p>两眼 是独相随
-		<p>只求他日能双归
-		<p>娇女我轻扶琴
-		<p>燕嬉紫竹林
-		<p>我痴情红颜心甘情愿
-		<p>千里把君寻
-		<p>我说红颜我痴情笑
-		<p>曲动琴声妙
-		<p>我轻狂高傲懵懂无知
-		<p>只怪太年少
-		<p>我弃江山
-		<p>忘天下
-		<p>斩断情丝无牵挂
-		<p>千古留名传佳话
-		<p>两年征战已白发
-		<p>一生征战何人陪
-		<p>谁是谁非谁相随
-		<p>帅哥一生为了谁
-		<p>能爱几回恨几回
-		<p>败帝王
-		<p>斗苍天
-		<p>夺得皇位以成仙
-		<p>豪情万丈天地间
-		<p>续写另类帝王篇
-		<p>红尘事我已斩断
-		<p>久经战场人心乱
-		<p>当年扬名又立万
-		<p>这一战我无遗憾
-		<p>相思
-		<p>我愁断肠
-		<p>眼中泪两行
-		<p>我多年为君一统天下
-		<p>帅哥把名扬
+	<div class="box">
+		<div class="star7">
+			<span class="star7_1"></span>
+		</div>
+		<div class="star6">
+			<span class="star6_1"></span>
+		</div>
+		<div class="star5">
+			<span class="star5_1"></span>
+		</div>
+		<div class="star4">
+			<span class="star4_1"></span>
+			<span class="star4_2"></span>
+		</div>
+		
+		<div class="star3">
+			<span class="star3_1"></span>
+		</div>
+		<div class="star2">
+			<span class="star2_1"></span>
+		</div>
+		<div class="star1">
+			<span class="star1_1"></span>
+		</div>
+		<div class="sun">
+			
+		</div>
+
 	</div>
 </body>
 </html>

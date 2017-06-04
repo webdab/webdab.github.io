@@ -7,4 +7,9 @@
 	}
 	p{
 		text-shadow:5px 5px 15px #666,-5px -5px 15px red;
+
+	}
+	p:nth-child(1){
+		text-shadow:5px 5px 15px #666,-5px -5px 15px red;
+
 	}
