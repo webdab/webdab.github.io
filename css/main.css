@@ -1,0 +1,10 @@
+	body{
+		background-color: #ccc;
+	}
+	div{
+		text-align: center;
+		font:700 30px "微软雅黑";
+	}
+	p{
+		text-shadow:5px 5px 15px #666,-5px -5px 15px red;
+	}
